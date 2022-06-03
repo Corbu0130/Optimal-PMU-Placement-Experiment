@@ -1,0 +1,11 @@
+fprintf("IEEE 57-bus test system Optimal PMU Placement\n");
+load Y57.mat;
+n = 57;
+c = ones(n,1);
+A = abs(Y)!=0;
+b = ones(n,1);
+lb = zeros(n,1);
+ub = ones(n,1);
+ctype = repmat("L",n,1);
+vartype = repmat("C",n,1);
+sense = 1;

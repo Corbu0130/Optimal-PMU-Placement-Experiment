@@ -1,0 +1,16 @@
+fprintf("IEEE 7-bus test system Optimal PMU Placement\n");
+n = 7;
+c = ones(n,1);
+A = [ 1 1 0 0 0 0 0;
+      1 1 1 0 0 1 1;
+      0 1 1 1 0 1 0;
+      0 0 1 1 1 0 1;
+      0 0 0 1 1 0 0;
+      0 1 1 0 0 1 0;
+      0 1 0 1 0 0 1; ];
+b = ones(n,1);
+lb = zeros(n,1);
+ub = ones(n,1);
+ctype = repmat("L",n,1);
+vartype = repmat("I",n,1);
+sense = 1;
